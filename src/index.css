@@ -14,8 +14,13 @@ code {
 }
 .date {
   border: 1px solid black;
+  width: 25%;
+  float: left;
 
 }
 .day {
   border: 1px solid black;
+  width: 25%;
+  float: left;
+
 }
