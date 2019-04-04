@@ -8,7 +8,7 @@ class App extends Component {
     let days= {
       1: "Monday",
       2: "Tuesday",
-      3: "Wenesday",
+      3: "Wendnesday",
       4: "Thursday",
       5: "Friday",
       6: "Saturday",
@@ -21,10 +21,17 @@ class App extends Component {
     return days[number]; 
   }
 
+getCurrentDate(){
+  let date = "November 18, 2019";
+
+  return date;
+}
+
+
   render() {
     return (
       <div className="App">
-        <div className="date">January 27, 2019</div>
+        <div className="date">{this.getCurrentDate()}</div>
         <div className="day">{this.getCurrentDay()}</div>
       </div>
     );
