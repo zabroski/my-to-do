@@ -6,8 +6,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>January 27, 2019</div>
-        <div>Wenesday</div>
+        <div className="date">January 27, 2019</div>
+        <div className="day">Wenesday</div>
       </div>
     );
   }
