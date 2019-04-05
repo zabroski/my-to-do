@@ -3,9 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-
+  
   getCurrentDay(){
-    let days= {
+    let days = {
       1: "Monday",
       2: "Tuesday",
       3: "Wendnesday",
@@ -50,9 +50,21 @@ class App extends Component {
       <div className="App">
         <div className="date">{this.getCurrentDate()}</div>
         <div className="day">{this.getCurrentDay()}</div>
+<br />
+        <ul>
+          <li>Read book </li>
+          <li>Go to school </li>
+          <li>Send text message </li>
+          <li>Call Laurent </li>
+        </ul>
       </div>
+
+      
     );
   }
 }
+
+
+
 
 export default App;
