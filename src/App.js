@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  
+
+  constructor(props){
+    super(props);
+    this.state = {
+      tasks: ["Task1", "Task2", "Task3"]
+      
+    }
+  };
+
   getCurrentDay(){
     let days = {
       1: "Monday",
@@ -19,7 +27,7 @@ class App extends Component {
     let number = date.getDay();
 
     return days[number]; 
-  }
+  };
 
   getCurrentDate(){
     let date= new Date();
@@ -43,8 +51,21 @@ class App extends Component {
     };
 
     return day + " " + months[number] + " " + year;
-  }
+  };
+  // getTasks(){
+  //   return ["Task1", "Task2", "Task3"];
+  // };
 
+  addTask = (e) => {
+    // this.setState({tasks: []})
+    console.log(e.target.value)
+  };
+
+  handleTypeTask = (event) => {
+    console.log(event.target.value);
+    this.setState({task: event.target.value})
+  };
+  
   render() {
     return (
       <div className="App">
@@ -52,11 +73,15 @@ class App extends Component {
         <div className="day">{this.getCurrentDay()}</div>
 <br />
         <ul>
-          <li>Read book </li>
-          <li>Go to school </li>
-          <li>Send text message </li>
-          <li>Call Laurent </li>
+          {this.state.tasks.map(function(task, index) {
+              return <li key={index} > {task}</li>
+          })}
         </ul>
+
+        <button onClick={this.addTask}>Click Me</button>
+        <form>
+          <input className= "item" type="text" placeholder="tasks" onChange={this.handleTypeTask}></input>
+        </form>
       </div>
 
       
